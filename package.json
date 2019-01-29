@@ -1,0 +1,30 @@
+{
+  "name": "relay-modern-future",
+  "description": "Relay Modern Future",
+  "version": "1.0.0",
+  "author": "Sibelius Seraphini",
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "mdx-code": "^1.1.3",
+    "mdx-deck": "^1.6.7",
+    "mdx-deck-code-surfer": "^0.5.5",
+    "mdx-deck-live-code": "^1.0.0",
+    "raw-loader": "^1.0.0"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "mdx-deck build src/deck.mdx",
+    "help": "mdx-deck",
+    "image": "mdx-deck screenshot src/deck.mdx",
+    "pdf": "mdx-deck pdf src/deck.mdx",
+    "copy:static": "cp -r src/img dist",
+    "publish:deck": "yarn build && yarn copy:static && gh-pages -d dist",
+    "start": "mdx-deck src/deck.mdx"
+  },
+  "dependencies": {
+    "codemirror": "^5.43.0",
+    "react-codemirror2": "^5.1.0"
+  }
+}

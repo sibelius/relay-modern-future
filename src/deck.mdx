@@ -1,0 +1,41 @@
+import { Head, Image } from 'mdx-deck'
+import Code from 'mdx-code';
+import { LiveCode } from 'mdx-deck-live-code';
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+import { Cover } from './Cover';
+import { Intro } from './Intro';
+import { CustomImage } from './CustomImage';
+import { DemoSlide} from './DemoSlide';
+
+export { default as theme } from './theme'
+
+<Head>
+  <title>Relay Modern Future</title>
+</Head>
+
+<Cover />
+
+---
+
+<Intro />
+
+---
+<div style={{fontSize: 28}}>
+<CodeSurfer
+  title="Relay Modern Future"
+  code={require('!raw-loader!./Future.js')}
+  showNumbers={true}
+  dark={true}
+  lang="javascript"
+  steps={[
+    { range: [78, 90], notes: 'useQuery'},
+    { range: [72, 76], notes: 'FeedQuery'},
+    { range: [51, 70], notes: 'FeedFragment'},
+    { range: [40, 49], notes: 'Post'},
+    { range: [32, 38], notes: 'PostFragment'},
+    { range: [20, 30], notes: 'Comments'},
+    { range: [3, 18], notes: 'CommentsFragment'},
+  ]}
+/>
+</div>
