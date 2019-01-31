@@ -5,8 +5,6 @@ import { CodeSurfer } from "mdx-deck-code-surfer";
 
 import { Cover } from './Cover';
 import { Intro } from './Intro';
-import { CustomImage } from './CustomImage';
-import { DemoSlide} from './DemoSlide';
 
 export { default as theme } from './theme'
 
@@ -25,10 +23,12 @@ export { default as theme } from './theme'
 <CodeSurfer
   title="Relay Modern Future"
   code={require('!raw-loader!./Future.js')}
-  showNumbers={true}
+  showNumbers={false}
   dark={true}
   lang="javascript"
   steps={[
+    { notes: "Relay Modern Future: Hooks and Suspense" },
+    { notes: "Relay Modern Future: This was based on relay core team discussion" },
     { range: [78, 90], notes: 'useQuery'},
     { range: [72, 76], notes: 'FeedQuery'},
     { range: [51, 70], notes: 'FeedFragment'},
